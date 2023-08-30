@@ -33,7 +33,42 @@ System.out.println("Mensaje con variable de entorno: " + variableValue);
 
 6. **Compiling the Application:**
    To ensure code integrity, create a dedicated stage in the pipeline for compiling the application. Here's how to set it up:
+```jenkins
+pipeline {
+    agent any
+    
+    environment {
+        variableName = 'MiValor' // Define el valor deseado para la variable de entorno
+    }
+    
+    stages {
+        stage('Clone and Fetch') {
+            steps {
+                // Clone the repository and fetch the latest code
+                git branch: 'main', url: 'https://github.com/juandiego-sierra-globant/CI_Challenge_Juan_D_Sierra.git'
+            }
+        }
+        
+        stage('Compile Application') {
+            steps {
+                // Compile the Java application
+                bat(script: 'javac Main.java', returnStatus: true)
+        
+            }
+        }
+        
+        stage('Execute Application') {
+            steps {
+                 // Execute the Java application with the environment variable
+                bat "java Main %variableName%"
+            }
+        }
+    }
+}
+
+```
 
 7. **Executing the Application:**
    After successful compilation, proceed to execute the application. It's essential to set this stage correctly, including passing any necessary parameters via the command line to ensure flawless code execution.
 
+## Result
