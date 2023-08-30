@@ -10,8 +10,8 @@ This project revolves around the utilization of the Main.java code within a Jenk
 
 ```java
 String variableValue = System.getenv("variableName");
-
-```java
 System.out.println("Mensaje con variable de entorno: " + variableValue);
+
+jajaja
 
 
