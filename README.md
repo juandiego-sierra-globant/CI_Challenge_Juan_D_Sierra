@@ -72,5 +72,5 @@ pipeline {
    After successful compilation, proceed to execute the application. It's essential to set this stage correctly, including passing any necessary parameters via the command line to ensure flawless code execution.
 
 ## Result
-![Resultado de la Compilación](Jenkins_Result.png)
-![Resultado de la Compilación](Downloads\Class_Jenkins.png)
+![Compilation Result](Jenkins_Result.png)
+![Compilation Result Creating a New Class](Class_Jenkins.png)
