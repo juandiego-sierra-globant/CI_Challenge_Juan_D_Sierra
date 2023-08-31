@@ -72,5 +72,9 @@ pipeline {
    After successful compilation, proceed to execute the application. It's essential to set this stage correctly, including passing any necessary parameters via the command line to ensure flawless code execution.
 
 ## Result
+
+This is the console output result after compiling the pipeline:
 ![Compilation Result](Jenkins_Result.png)
+
+After that, we create a simple class and a simple project, to print the name of the object and the same environment variable:
 ![Compilation Result Creating a New Class](Class_Jenkins.png)
